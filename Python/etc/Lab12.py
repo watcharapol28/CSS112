@@ -47,7 +47,7 @@ while True:
     str_num = [str(int) for int in list_num]
     plist = ','.join(str_num)
     print(plist)
-    shuffle
+#    shuffle
 
 print(" -- End your program -- ")
 
