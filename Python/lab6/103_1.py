@@ -14,6 +14,6 @@ for i in fac:
     for j in Dict[i]:
         if not j in ans:
             ans.append(j)
-
+ans = sorted(ans)
 for i in ans:
     print(i, end = ' ')
