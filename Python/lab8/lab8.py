@@ -1,0 +1,57 @@
+class info:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    
+class boss(info):
+    salary = 60000
+    def __init__(self, name, age):
+        super().__init__(name, age)
+
+class employee(info):
+    salary = 20000
+    def __init__(self, name, age):
+        super().__init__(name, age)
+
+class person(employee, boss):
+    def __init__(self, name, age, status):
+        super().__init__(name, age)
+        self.status = status
+        if status == employee.__name__:
+            self.salary = employee.salary
+        else:
+            self.salary = boss.salary
+
+
+
+class about(person):
+
+    def info_(self):
+        print("{} have {} years old ,Now his status is {} in company and his salary is {} ".format(self.name, self.age, self.status, self.salary))
+
+    @staticmethod
+    def show_salary():
+        print("now boss have salary {}  and employee have salary {}".format(boss.salary,employee.salary))
+
+    @staticmethod
+    def salary_increase(status):
+        if status == "boss":
+            boss.salary += 3000
+        else :
+            employee.salary += 1500
+    
+    @staticmethod
+    def salary_decrease(status):
+        if status == "boss":
+            boss.salary -= 2000
+        else :
+            employee.salary -= 500
+
+
+print(about.__name__)
+A1 = about("AVS ADD", 26, "boss")
+about.salary_increase("boss")
+A1.info_()
+A2 = about("WAR DDS", 35, "boss")
+A2.info_()
