@@ -30,7 +30,6 @@ class about(person):
     def info_(self):
         print("{} have {} years old ,Now his status is {} in company and his salary is {} ".format(self.name, self.age, self.status, self.salary))
 
-    @staticmethod
     def show_salary():
         print("now boss have salary {}  and employee have salary {}".format(boss.salary,employee.salary))
 
@@ -49,9 +48,10 @@ class about(person):
             employee.salary -= 500
 
 
-print(about.__name__)
-A1 = about("AVS ADD", 26, "boss")
+A1 = about("Warsss Serrr", 26, "employee")
 about.salary_increase("boss")
 A1.info_()
-A2 = about("WAR DDS", 35, "boss")
+A2 = about("Eter Essey", 35, "boss")
 A2.info_()
+about.show_salary()
+print(A1.__class__.mro())
