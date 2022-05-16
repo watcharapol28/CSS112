@@ -1,5 +1,17 @@
-import numpy as np
+def animate_drop(board, shape, c):
+    long = shape.shape[1]
+    for i in len(board):
+        board[i][c:c+long] == 0 or shape[i]
 
-x = np.array([[3,4],[5,12],[24,7]])
-y = np.array([int((i[0]**2 + i[1]**2)**(1/2)) for i in x])
-print(y)
+
+    return 0
+
+board = np.array([[4,0,0,0],
+                [1,0,0,0],
+                [1,0,0,0],
+                [1,1,0,0]])
+
+shape = np.array([[2,2,2],
+                [2,0,0]])
+
+c = 1
