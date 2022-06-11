@@ -1,6 +1,8 @@
 import sys
 import os
 
+os.chdir(r"D:/Programming/Git/CSS112/Python/lab10/2")
+
 try:
     super_dd = open("super_dd.txt", 'a',)
 except:
@@ -18,7 +20,7 @@ for i in range(1,4):
 
             if file.endswith(".txt"): 
                 nub += 1
-                
+
                 file_path = f"{path}\{file}"
                 with open(file_path, 'r') as f:
                     
